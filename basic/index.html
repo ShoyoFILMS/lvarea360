@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lvarea360 sample</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <link rel="stylesheet" href="./style.css?" type="text/css" media="all" />
+  </head>
+  <body>
+	<ul id="mode">
+		<li class="view selected">VIEW</li>
+		<li class="map">MAP</li>
+		<li class="area">AREA</li>
+	</ul>
+    <a-scene>
+		<a-sky id="sky"></a-sky>
+		<a-entity raycaster="objects: .ui" cursor="rayOrigin:mouse"></a-entity>
+		<a-entity rotation="0 0 0" id="rotator">
+		  <a-entity camera position="0 0 0" look-controls></a-entity>
+		</a-entity>
+		<a-image src="./icon/arrow.png" rotation="0 0 0" position="0 0 0" id="arrow1" class="ui" visible="false"></a-image>
+		<a-image src="./icon/circle.png" rotation="0 0 0" position="0 0 4" id="circle2" class="ui" visible="false"></a-image>
+    </a-scene>
+    <div id="map"></div>
+    <p id="tooltip"></p>
+	<ul id="jump_map"></ul>
+	<div id="preload"><div class="loading"></div></div>
+	<script src="https://unpkg.com/konva@3.2.4/konva.min.js"></script>
+	<script src="./script.js"></script>
+  </body>
+</html>
